@@ -15,7 +15,7 @@ alter column Saledate date
 Select*
 from PortfolioProjects..NashvilleHousing
 where PropertyAddress is NULL				/* Viewing Blank Addresses */
-order by ParcelID							/* Observed pattern in ParcelID and Property Address */
+order by ParcelID							         /* Observed pattern in ParcelID and Property Address */
 
 Select a.PropertyAddress,a.ParcelID, b.PropertyAddress,b.ParcelID,ISNULL(a.propertyaddress,b.PropertyAddress) as NewPropertAddress
 from PortfolioProjects..NashvilleHousing a
